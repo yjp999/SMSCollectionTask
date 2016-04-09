@@ -1,0 +1,133 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gainsboro" >
+
+    <FrameLayout 
+        android:id="@+id/fl"
+        android:layout_width="fill_parent"
+        android:layout_height="350dip"        
+        >
+        
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            />
+        
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="35dip"
+            android:orientation="vertical"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:background="#33000000"
+            >
+            
+            <TextView 
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_pic_title"
+                android:textColor="@android:color/white"
+                />
+            
+            <LinearLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="3dip"
+                >
+                
+                <View 
+                    android:id="@+id/dot_0"
+                    android:layout_width="5dip"
+                    android:layout_height="5dip"
+                    android:layout_marginLeft="2dip"
+                    android:layout_marginRight="2dip"
+                    android:background="@drawable/dot_focused"
+                    />
+                <View 
+                    android:id="@+id/dot_1"
+                    android:layout_width="5dip"
+                    android:layout_height="5dip"
+                    android:layout_marginLeft="2dip"
+                    android:layout_marginRight="2dip"
+                    android:background="@drawable/dot_normal"
+                    />
+                <View 
+                    android:id="@+id/dot_2"
+                    android:layout_width="5dip"
+                    android:layout_height="5dip"
+                    android:layout_marginLeft="2dip"
+                    android:layout_marginRight="2dip"
+                    android:background="@drawable/dot_normal"
+                    />
+                
+                
+            </LinearLayout>
+            
+            
+        </LinearLayout>
+        
+    </FrameLayout>
+    
+    <LinearLayout 
+        android:id="@+id/ll_begin_sms"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/fl"
+	    android:layout_marginTop="80dp"
+	    android:orientation="horizontal"
+	    android:background="@color/whitesmoke" >
+	    
+	    <ImageView 
+	        android:id="@+id/icon_smss"
+	        android:layout_width="40dp"
+	        android:layout_height="40dp"
+	        android:layout_gravity="center_vertical"
+	        android:contentDescription="@string/app_name"
+	        android:src="@drawable/sms"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginRight="10dp"
+	        />
+	    
+	    <LinearLayout 
+	        android:id="@+id/line_history_item"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:gravity="center_vertical"
+	        android:minHeight="?android:attr/listPreferredItemHeight"
+	        android:orientation="vertical"
+	        >
+	        
+	        <TextView 
+	            android:id="@+id/tv_history_ok_num"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:gravity="center_vertical"
+	            android:text="@string/str_msg_task"
+	            android:textSize="18sp"/>
+	        
+	        <TextView 
+	            android:id="@+id/tv_ok"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:gravity="center_vertical"
+	            android:textSize="12sp"
+	            android:text="@string/str_clickfordetail"/>
+	        
+	        
+	    </LinearLayout>
+	    
+	
+	</LinearLayout>
+    
+    
+    
+    
+    
+</RelativeLayout>
+

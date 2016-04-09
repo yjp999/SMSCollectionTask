@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.cloudyang.util.SildingFinishLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sildingFinishLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    >
+    
+    <include layout="@layout/title_sms" />
+    
+    <RelativeLayout 
+        android:id="@+id/line"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/slitegrey">
+        
+        <Button 
+        	android:id="@+id/bt_selectall"
+        	android:layout_width="50dp"
+        	android:layout_height="30dp"
+        	android:layout_marginLeft="@dimen/button_margin_left"
+        	android:text="@string/selectall"
+        	android:textSize="15sp"
+        	android:layout_centerVertical="true"
+        	android:background="@color/whitesmoke"
+        	/>
+        
+        <Button 
+            android:id="@+id/bt_cancelselectall"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@id/bt_selectall"
+            android:layout_marginLeft="@dimen/button_margin_left"
+            android:text="@string/cancelselectall"
+            android:textSize="15sp"
+            android:layout_centerVertical="true"
+            android:background="@color/whitesmoke"
+            />
+        
+        <Button 
+            android:id="@+id/bt_deselectall"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@id/bt_cancelselectall"
+            android:layout_marginLeft="@dimen/button_margin_left"
+            android:text="@string/deselectall"
+            android:textSize="15sp"
+            android:layout_centerVertical="true"
+            android:background="@color/whitesmoke"
+            />
+        
+        <Button 
+            android:id="@+id/bt_upload"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@id/bt_deselectall"
+            android:layout_marginLeft="@dimen/button_margin_left"
+            android:text="@string/str_bt_upload"
+            android:textSize="15sp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_alibuybutton"
+            />
+        
+        <TextView android:id="@+id/tv_show_checkNum"
+	        android:layout_width="fill_parent"
+	        android:layout_height="30dp"
+	        android:layout_toRightOf="@id/bt_upload"
+	        android:textSize="14sp"
+	        android:singleLine="true"
+	        android:gravity="center"
+	        android:layout_centerVertical="true" />
+    </RelativeLayout>
+    
+    
+    <ListView 
+        android:id="@+id/ListView_Sms"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
+
+</com.cloudyang.util.SildingFinishLayout>

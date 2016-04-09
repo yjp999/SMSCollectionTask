@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <include layout="@layout/title_historydetail" />
+    
+    <TextView 
+        android:id="@+id/tv_faq_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="18sp"
+        android:text="@string/str_faq_q_1"
+        android:textColor="@color/blue"
+        android:textStyle="bold|italic"
+        android:background="@color/gainsboro"
+        />
+    
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:singleLine="false"
+        android:textSize="12sp"
+        android:gravity="center_vertical"
+        android:text="@string/str_faq_a_1"
+        />
+    
+    <TextView
+        android:id="@+id/tv_faq_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+         android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="18sp"
+        android:text="@string/str_faq_q_2"
+        android:textColor="@color/blue"
+        android:textStyle="bold|italic"
+        android:background="@color/gainsboro"
+        />
+    
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:singleLine="false"
+        android:textSize="12sp"
+        android:gravity="center_vertical"
+        android:text="@string/str_faq_a_2"
+        />
+    
+    <TextView
+        android:id="@+id/tv_faq_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+         android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="18sp"
+        android:text="@string/str_faq_q_3"
+        android:textColor="@color/blue"
+        android:textStyle="bold|italic"
+        android:background="@color/gainsboro"
+        />
+    
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:singleLine="false"
+        android:textSize="12sp"
+        android:gravity="center_vertical"
+        android:text="@string/str_faq_a_3"
+        />
+
+</LinearLayout>

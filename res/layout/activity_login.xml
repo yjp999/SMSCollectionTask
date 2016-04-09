@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg1"
+    android:gravity="center" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:paddingBottom="10.0dip"
+        android:orientation="vertical" >
+
+        <TextView 
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/str_topname"
+            android:textSize="24sp"
+            android:textStyle="bold|italic"
+            android:textColor="@color/violet"
+            android:gravity="center"
+            android:typeface="monospace"
+            />
+        
+        <ImageView
+	       android:id="@+id/loginImage"
+	       android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:layout_gravity="center_horizontal" 
+	       android:layout_marginTop="20dp"
+	       android:contentDescription="@string/app_name"/>
+
+        <EditText
+            android:id="@+id/telephoneEdit"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:layout_marginLeft="20.0dip"
+            android:layout_marginRight="20.0dip"
+            android:layout_marginTop="20.0dip"
+            android:background="@drawable/txtborder"
+            android:drawablePadding="10.0dip"
+            android:ems="10"
+            android:hint="@string/input_account"
+            android:inputType="text"
+            android:paddingBottom="2.0dip"
+            android:paddingLeft="15.0dip"
+            android:paddingRight="15.0dip"
+            android:paddingTop="2.0dip"
+            android:singleLine="true"
+            android:textColorHint="#ff999999"
+            android:textSize="16.0sp" />
+
+        <EditText
+            android:id="@+id/passwdText"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:layout_marginBottom="20.0dip"
+            android:layout_marginLeft="20.0dip"
+            android:layout_marginRight="20.0dip"
+            android:layout_marginTop="20.0dip"
+            android:background="@drawable/txtborder"
+            android:drawablePadding="10.0dip"
+            android:ems="10"
+            android:hint="@string/input_passwd"
+            android:inputType="textPassword"
+            android:paddingBottom="2.0dip"
+            android:paddingLeft="15.0dip"
+            android:paddingRight="15.0dip"
+            android:paddingTop="2.0dip"
+            android:singleLine="true"
+            android:textColorHint="#ff999999"
+            android:textSize="16.0sp" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:layout_marginLeft="20.0dip"
+            android:layout_marginRight="20.0dip"
+            android:height="50.0dip"
+            android:singleLine="true"
+            android:text="@string/btn_login"
+            android:textColor="#ffffffff"
+            android:background="#1E90FF"
+            android:textSize="18.0sp" />
+        
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            >
+            
+            <TextView
+                android:id="@+id/register_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_alignParentLeft="true"
+                android:text="@string/str_create_account"
+                android:textSize="18sp"
+                android:typeface="serif"
+                android:textColor="@color/navy"
+                />
+            
+            <TextView
+                android:id="@+id/tv_forget_passwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_alignParentRight="true"
+                android:text="@string/str_forget_passwd"
+                android:textSize="18sp"
+                android:typeface="serif"
+                android:textColor="@color/navy"
+                />
+            
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

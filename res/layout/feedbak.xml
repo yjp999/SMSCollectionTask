@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gainsboro" >
+    
+    <include layout="@layout/title_historydetail" />
+    
+    <EditText
+        android:id="@+id/et_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_margin="20dp"
+        android:textSize="15sp"
+        android:textScaleX="1.0"
+        android:hint="@string/str_input_advise"
+        android:textColorHint="#ff666666"
+        android:background="@drawable/et"
+        android:gravity="top"
+        />
+    
+    <Button
+        android:id="@+id/submit_advise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/str_submit_advise"
+        android:background="#1E90FF" 
+        android:textSize="18sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="#ffffffff"
+        />
+    
+
+</LinearLayout>

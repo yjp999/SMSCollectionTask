@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">轻松赚</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="input_account">请输入手机号（11位）</string>
+    <string name="input_passwd">请输入密码</string>
+    <string name="btn_login">登录</string>
+    <string name="str_rule_1">1.不限短信类型，包括但不限于普通生活短信，垃圾短信等</string>
+    <string name="str_rule_2">2.短信长度不小于7个字（不含标点符号）</string>
+    <string name="str_rule_3">3.同一条短信只能上传一次，重复无效</string>
+    <string name="str_notify_text">注意事项:</string>
+    <string name="str_begin_task">开始任务</string>
+    <string name="selectall">全选</string>
+    <string name="cancelselectall">反选</string>
+    <string name="deselectall">取消</string>
+    <string name="str_bt_upload">上传</string>
+    <string name="back_str">返回</string>
+    <string name="str_get_sms">短信采集</string>
+    <string name="str_me">我</string>
+    <string name="str_wallet">我的钱包</string>
+    <string name="str_feedback_pro">在线反馈</string>
+    <string name="str_per_setting">修改密码</string>
+    <string name="str_FAQ">常见问题</string>
+    <string name="str_quit">退出登录</string>
+    <string name="str_account_money">账户余额</string>
+    <string name="str_create_account">点我注册</string>
+    <string name="str_forget_passwd">忘记密码</string>
+    <string name="str_et_phone">手机号</string>
+    <string name="str_phone_hint">只支持中国大陆地区</string>
+    <string name="str_tv_passwd">密     码</string>
+    <string name="str_hint_passwd">请输入您的密码</string>
+    <string name="str_tv_telephone">手机号</string>
+    <string name="str_hint_telephone">请输入您的手机号</string>
+    <string name="str_btn_register">确认并注册</string>
+    <string name="str_detail_task">任务详情</string>
+    <string name="str_record_task">历史任务</string>
+    <string name="str_history_ok">已通过</string>
+    <string name="str_upload_result">上传结果</string>
+    <string name="str_clickfordetail">点击查看详情</string>
+    <string name="str_msg_task">短信收集任务</string>
+    <string name="str_pic_title">图片标题</string>
+    <string name="str_faq_q_1">\t1  赚到的钱怎么领取？</string>
+    <string name="str_faq_a_1">答: 轻松赚APP取现功能目前仍在开发中，请耐心等待，不过您不用担心，凡是已经产生的余额是有法律保障的，待取现功能完全实现后，您可以自由提取</string>
+    <string name="str_faq_q_2">\t2  怎么查看自己的任务信息？</string>
+    <string name="str_faq_a_2">答: 返回当前界面，点击历史任务，即可查看个人上传记录，相应的报酬也一并叠加到您的账户中，待取现功能实现后，即可提取</string>
+    <string name="str_faq_q_3">\t3  什么是无效短信？</string>
+    <string name="str_faq_a_3">答: 上传规则在开始任务之前，已有详细说明，具体规则您可以在下次上传之前仔细阅读</string>
+    <string name="str_input_advise">请输入您的意见</string>
+    <string name="str_submit_advise">提交</string>
+    <string name="str_old_passwd">原密码</string>
+    <string name="str_new_passwd">新密码</string>
+    <string name="str_cp">修改密码</string>
+    <string name="str_phonenumber">手机号</string>
+    <string name="str_topname">想赚小钱，快点登陆吧</string>
+    <string name="str_register">注册账号</string>
+    <string name="smssdk_receive_msg"><Data>&lt;font color=#209526>%s&lt;/font>秒</Data></string>
+    <string name="str_rule_4">4.每条短信0.03元，无效短信0元</string>
+    <string name="str_rule_5">5.在非WIFI环境下上传短信及注册登录会产生流量费用</string>
+    
+
+</resources>

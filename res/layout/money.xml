@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <include layout="@layout/title_historydetail" />
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="120dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical"
+        android:background="@color/white"
+        
+        >
+        
+        <RelativeLayout 
+            android:id="@+id/rl_money"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center">
+            
+            
+            <TextView 
+                android:id="@+id/tv_money_account"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:textColor="@color/red"
+                android:layout_marginLeft="10dp"
+                android:textSize="30sp"
+                android:gravity="center"
+                />
+            
+        </RelativeLayout>
+        
+        <TextView 
+            android:id="@+id/tv_show_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:text="@string/str_account_money"
+            android:textColor="@color/grey"/>
+        
+        
+    </LinearLayout>
+    
+    <GridView 
+        android:id="@+id/MyGridView"   
+        android:layout_width="fill_parent"   
+        android:layout_height="wrap_content"  
+        android:columnWidth="90dp"   
+        android:stretchMode="columnWidth"  
+        android:numColumns="auto_fit"   
+        android:horizontalSpacing="1dp"  
+        android:verticalSpacing="1dp"
+        android:background="@color/gray"   
+        android:gravity="center" >
+    </GridView>
+
+</LinearLayout>
