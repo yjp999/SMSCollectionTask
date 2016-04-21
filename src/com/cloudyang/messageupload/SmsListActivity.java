@@ -57,7 +57,7 @@ public class SmsListActivity extends SwipeBackActivity implements OnClickListene
 	
 	private Context context;
 	private UploadTask upload;
-	public static String IP = "192.168.1.139";
+	public static String IP = "192.168.199.167";
 	private static String URL = "http://"+IP+"/TEST/read_msg.php";
 	
 	public static final String FTP_CONNECT_SUCCESSS = "ftp连接成功";
