@@ -31,16 +31,6 @@ public class HistoryTaskDetail extends SwipeBackActivity implements OnClickListe
 		imagBack.setOnClickListener(this);
 	}
 	
-	
-	
-	
-
-	
-
-
-
-
-
 	@Override
 	public void onClick(View arg0) {
 		switch (arg0.getId()) {
@@ -54,15 +44,6 @@ public class HistoryTaskDetail extends SwipeBackActivity implements OnClickListe
 	}
 
 
-
-
-
-
-
-
-
-
-
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
@@ -70,7 +51,4 @@ public class HistoryTaskDetail extends SwipeBackActivity implements OnClickListe
 	}
 	
 	
-	
-	
-
 }

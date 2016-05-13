@@ -1,6 +1,6 @@
 package com.swipebacklayout.lib.app;
 
-import me.imid.swipebacklayout.lib.SwipeBackLayout;
+import com.cloudyang.swipebacklayout.SwipeBackLayout;
 /**
  * @author Yrom
  */

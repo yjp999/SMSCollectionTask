@@ -2,12 +2,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/gainsboro" >
-
+    android:background="@color/gainsboro">
+	
+    <include layout="@layout/title_main" />
+    
     <FrameLayout 
         android:id="@+id/fl"
         android:layout_width="fill_parent"
-        android:layout_height="350dip"        
+        android:layout_height="350dip"    
+        android:layout_marginTop="50dp"    
         >
         
         <android.support.v4.view.ViewPager
@@ -78,7 +81,7 @@
 	    android:layout_width="match_parent"
 	    android:layout_height="wrap_content"
 	    android:layout_below="@id/fl"
-	    android:layout_marginTop="80dp"
+	    android:layout_marginTop="50dp"
 	    android:orientation="horizontal"
 	    android:background="@color/whitesmoke" >
 	    

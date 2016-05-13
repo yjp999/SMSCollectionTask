@@ -59,7 +59,7 @@
         </activity>
         
         <activity 
-            android:name=".MyCount">
+            android:name="com.cloudyang.my.MyCount">
         </activity>
         
         <activity 

@@ -58,6 +58,14 @@
     <string name="smssdk_receive_msg"><Data>&lt;font color=#209526>%s&lt;/font>秒</Data></string>
     <string name="str_rule_4">4.每条短信0.03元，无效短信0元</string>
     <string name="str_rule_5">5.在非WIFI环境下上传短信及注册登录会产生流量费用</string>
+    <string name="str_qrcode_download">扫描二维码，下载轻松赚APP</string>
+    <string name="str_china_phone_no">+86</string>
+    <string name="str_write_telephone">请填写手机号码</string>
+    <string name="str_write_pwd">请输入密码</string>
+    <string name="str_confirm_pwd">请确认密码</string>
+    <string name="str_write_captcha">请填写验证码</string>
+    <string name="str_get_captcha">获取验证码</string>
+    <string name="str_confirm_register">确认并注册</string>
     
 
 </resources>

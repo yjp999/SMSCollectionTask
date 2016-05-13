@@ -1,16 +1,16 @@
-package com.ftp;
+package com.cloudyang.ftp;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 
+import com.cloudyang.ftp.FTP.UploadProgressListener;
 import com.cloudyang.messageupload.SmsListActivity;
-import com.ftp.FTP.UploadProgressListener;
 
 
 public class ProgressInputStream extends InputStream {
 
-    private static final int TEN_KILOBYTES = 1024 * 10;  //姣忎笂浼�0K杩斿洖涓�
+    private static final int ONE_KILOBYTES = 1024;  //每上�?K返回�?���?
 
     private InputStream inputStream;
 
@@ -60,7 +60,7 @@ public class ProgressInputStream extends InputStream {
     }
 
     private long maybeUpdateDisplay(long progress, long lastUpdate) {
-        if (progress - lastUpdate > TEN_KILOBYTES) {
+        if (progress - lastUpdate > ONE_KILOBYTES) {
             lastUpdate = progress;
             this.listener.onUploadProgress(SmsListActivity.FTP_UPLOAD_LOADING, progress, this.localFile);
         }

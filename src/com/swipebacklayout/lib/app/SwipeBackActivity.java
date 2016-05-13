@@ -2,8 +2,9 @@
 package com.swipebacklayout.lib.app;
 
 
-import me.imid.swipebacklayout.lib.SwipeBackLayout;
-import me.imid.swipebacklayout.lib.Utils;
+import com.cloudyang.swipebacklayout.SwipeBackLayout;
+import com.cloudyang.swipebacklayout.Utils;
+
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
@@ -23,7 +24,7 @@ public class SwipeBackActivity extends FragmentActivity implements SwipeBackActi
         mHelper.onActivityCreate();
         mSwipeBackLayout = getSwipeBackLayout();
         mSwipeBackLayout.setEdgeTrackingEnabled(SwipeBackLayout.EDGE_LEFT);
-//        mSwipeBackLayout.setScrimColor(getResources().getColor(R.color.holo_green_light));
+//      mSwipeBackLayout.setScrimColor(getResources().getColor(R.color.holo_green_light));
         mSwipeBackLayout.setEdgeSize(100);
     }
 

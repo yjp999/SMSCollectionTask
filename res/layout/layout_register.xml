@@ -21,7 +21,7 @@
             android:layout_height="match_parent"
             android:background="@drawable/bg_edittext"
             android:gravity="center"
-            android:text="+86"
+            android:text="@string/str_china_phone_no"
             android:textColor="#ff353535"
             android:textSize="15sp" />
 
@@ -34,14 +34,13 @@
 
             <EditText
                 android:id="@+id/et_write_phone"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
-                android:layout_weight="1"
                 android:background="@null"
-                android:hint="请填写手机号码"
+                android:hint="@string/str_write_telephone"
                 android:inputType="phone"
                 android:textColor="#ff353535"
                 android:textSize="15sp" />
@@ -54,6 +53,7 @@
                 android:layout_marginRight="12dp"
                 android:background="@drawable/icon_clear"
                 android:scaleType="centerInside"
+                android:contentDescription="@string/str_cp"
                 android:visibility="gone" />
         </LinearLayout>
     </LinearLayout>
@@ -77,7 +77,7 @@
             android:layout_marginRight="8dp"
             android:layout_weight="1"
             android:background="@null"
-            android:hint="请输入密码"
+            android:hint="@string/str_write_pwd"
             android:inputType="textPassword"
             android:textColor="#ff353535"
             android:textSize="15sp" />
@@ -91,6 +91,7 @@
             android:layout_gravity="center_vertical"
             android:layout_marginRight="12dp"
             android:background="@drawable/pwd_open"
+            android:contentDescription="@string/app_name"
             android:visibility="gone" />
     </LinearLayout>
     
@@ -113,7 +114,7 @@
             android:layout_marginRight="8dp"
             android:layout_weight="1"
             android:background="@null"
-            android:hint="请确认密码"
+            android:hint="@string/str_confirm_pwd"
             android:inputType="textPassword"
             android:textColor="#ff353535"
             android:textSize="15sp" />
@@ -126,6 +127,7 @@
             android:layout_marginRight="12dp"
             android:background="@drawable/icon_clear"
             android:scaleType="fitCenter"
+            android:contentDescription="@string/app_name"
             android:visibility="gone" />
         
     </LinearLayout>
@@ -149,7 +151,7 @@
             android:layout_marginRight="8dp"
             android:layout_weight="1"
             android:background="@null"
-            android:hint="请填写验证码"
+            android:hint="@string/str_write_captcha"
             android:inputType="phone"
             android:textColor="#ff353535"
             android:textSize="15sp" />
@@ -160,7 +162,7 @@
 	        android:layout_height="48dp"
 	        android:layout_marginLeft="16dp"
 	        android:background="@drawable/smssdk_btn"
-	        android:text="获取验证码"
+	        android:text="@string/str_get_captcha"
 	        android:textColor="#ffffff"
 	        android:textSize="15sp" />
     </LinearLayout>
@@ -174,7 +176,7 @@
 	     android:layout_marginRight="16dp"
 	     android:layout_marginTop="20dp"
 	     android:background="@drawable/smssdk_btn"
-	     android:text="确认并注册"
+	     android:text="@string/str_confirm_register"
 	     android:textColor="#ffffff"
 	     android:textSize="15sp" />
 	    

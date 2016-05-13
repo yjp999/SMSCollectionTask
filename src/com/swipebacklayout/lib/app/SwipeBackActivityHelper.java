@@ -2,6 +2,8 @@ package com.swipebacklayout.lib.app;
 
 
 import com.cloudyang.messageupload.R;
+import com.cloudyang.swipebacklayout.SwipeBackLayout;
+import com.cloudyang.swipebacklayout.Utils;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -10,8 +12,6 @@ import android.graphics.drawable.ColorDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 
-import me.imid.swipebacklayout.lib.SwipeBackLayout;
-import me.imid.swipebacklayout.lib.Utils;
 
 /**
  * @author Yrom

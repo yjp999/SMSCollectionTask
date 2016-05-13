@@ -39,6 +39,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.cloudyang.ftp.FTP;
+import com.cloudyang.ftp.UploadTask;
 import com.cloudyang.info.SmsInfo;
 import com.cloudyang.util.ActivityCollector;
 import com.cloudyang.util.HttpUtils;
@@ -48,8 +50,7 @@ import com.cloudyang.util.SmsContent;
 import com.cloudyang.util.SmsListAdapter;
 import com.cloudyang.util.SmsListAdapter.ViewHolder;
 import com.cloudyang.messageupload.R;
-import com.ftp.FTP;
-import com.ftp.UploadTask;
+import com.cloudyang.my.MyCount;
 import com.swipebacklayout.lib.app.SwipeBackActivity;
 
 @SuppressLint("HandlerLeak")
@@ -57,8 +58,9 @@ public class SmsListActivity extends SwipeBackActivity implements OnClickListene
 	
 	private Context context;
 	private UploadTask upload;
-	public static String IP = "192.168.199.167";
+	public static String IP = "192.168.199.189";
 	private static String URL = "http://"+IP+"/TEST/read_msg.php";
+	private static String moneyurl = "http://"+IP+"/TEST/write_money.php";
 	
 	public static final String FTP_CONNECT_SUCCESSS = "ftp连接成功";
 	public static final String FTP_CONNECT_FAIL = "ftp连接失败";
@@ -83,6 +85,7 @@ public class SmsListActivity extends SwipeBackActivity implements OnClickListene
 	public String fileName;
 	public String time_filename;
 	private Handler handler;
+	private Handler handler_money;
 	
 	
 	public static String jsonFilePath = "record.json";
@@ -157,10 +160,34 @@ public class SmsListActivity extends SwipeBackActivity implements OnClickListene
     	// touchView要设置到ListView上面  
         mSildingFinishLayout.setTouchView(listView);
         listView.setOnItemClickListener(this);
-//		LinearLayout smsLayout = (LinearLayout) findViewById(R.id.smsList_linearlayout);
-//		smsLayout.setOnTouchListener(this);
         
-        
+        handler_money = new Handler(){
+
+			@Override
+			public void handleMessage(Message msg) {
+				super.handleMessage(msg);
+				switch (msg.what) {
+				case 0:
+					try {
+						String res = msg.getData().getString("res");
+						JSONObject result = new JSONObject(res);
+						int success = Integer.parseInt(result.getString("success"));
+						if(success == 0){
+							Toast.makeText(SmsListActivity.this, "零钱已经存入您的账户", Toast.LENGTH_SHORT).show();
+						}else{
+							Toast.makeText(SmsListActivity.this, "存入失败", Toast.LENGTH_LONG).show();
+						}
+					} catch (JSONException e) {
+						e.printStackTrace();
+					}
+					break;
+
+				default:
+					break;
+				}
+			}
+			
+		};
         
         handler = new Handler(){
 			@SuppressLint("HandlerLeak")
@@ -177,9 +204,10 @@ public class SmsListActivity extends SwipeBackActivity implements OnClickListene
 						int invalid = Integer.parseInt(result.getString("invalid"));
 						int all = Integer.parseInt(result.getString("allcount"));
 						int valid = Integer.parseInt(result.getString("valid"));
-						WalletActivity.accountMoney += 0.03 * valid; //calculate how much money get 
+						final double earn = 0.03 * valid;
+						WalletActivity.accountMoney += earn; //calculate how much money get 
 						
-						result.put("money", 0.03*valid);
+						result.put("money", earn);
 						String timeString = time_filename.replace(".txt", "");
 						result.put("uploadTime", timeString);
 						jsonString = result.toString();
@@ -199,6 +227,26 @@ public class SmsListActivity extends SwipeBackActivity implements OnClickListene
 								
 								writeJsonFile(jsonFilePath, jsonString);
 								
+								final JSONObject json = new JSONObject();
+								try {
+									json.put("telephone", getTelephone());
+									json.put("earnings", earn);
+								} catch (JSONException e) {
+									e.printStackTrace();
+								}
+								new Thread(){
+
+									@Override
+									public void run() {
+										try {
+											HttpUtils.httpPostMethod(moneyurl, json, handler_money);
+										} catch (IOException
+												| JSONException e) {
+											e.printStackTrace();
+										}
+									}
+									
+								}.start();
 							}
 						});
 						dialog.show();
@@ -463,6 +511,11 @@ public class SmsListActivity extends SwipeBackActivity implements OnClickListene
 		} else {
 			Log.e("yjp", "文件不存在！"+"\n");
 		}
+	}
+	
+	public String getTelephone(){
+		SharedPreferences sharedPreferences = getSharedPreferences("userInfo", Context.MODE_PRIVATE);
+		return sharedPreferences.getString("account", "");
 	}
 
 	

@@ -39,7 +39,6 @@ public class ChangePasswdActivity extends SwipeBackActivity implements OnClickLi
 	private Handler handler;
 	private static String url = "http://"+SmsListActivity.IP+"/TEST/changePasswd.php";
 	
-	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

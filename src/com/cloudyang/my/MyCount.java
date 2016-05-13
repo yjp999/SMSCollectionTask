@@ -1,9 +1,7 @@
-package com.cloudyang.messageupload;
+package com.cloudyang.my;
 
-import com.cloudyang.my.ChangePasswdActivity;
-import com.cloudyang.my.FAQActivity;
-import com.cloudyang.my.FeedBackActivity;
-import com.cloudyang.my.HistoryTaskActivity;
+import com.cloudyang.messageupload.R;
+import com.cloudyang.messageupload.WalletActivity;
 import com.cloudyang.util.ActivityCollector;
 import com.swipebacklayout.lib.app.SwipeBackActivity;
 
@@ -114,6 +112,8 @@ public class MyCount extends SwipeBackActivity implements OnClickListener{
 		super.onDestroy();
 		ActivityCollector.removeActivity(this);
 	}
+	
+	
 	
 	public void removeSharedPreference() {
 		SharedPreferences sharedPreferences = getSharedPreferences("userInfo", Context.MODE_PRIVATE);

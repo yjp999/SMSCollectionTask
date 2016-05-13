@@ -1,5 +1,6 @@
 package com.cloudyang.messageupload;
 
+import com.cloudyang.my.MyCount;
 import com.cloudyang.util.ActivityCollector;
 import com.swipebacklayout.lib.app.SwipeBackActivity;
 

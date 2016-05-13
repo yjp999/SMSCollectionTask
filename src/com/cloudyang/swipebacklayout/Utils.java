@@ -1,5 +1,5 @@
 
-package me.imid.swipebacklayout.lib;
+package com.cloudyang.swipebacklayout;
 
 import android.app.Activity;
 

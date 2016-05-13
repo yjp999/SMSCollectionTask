@@ -5,6 +5,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
+import com.cloudyang.my.MyCount;
 import com.cloudyang.util.ActivityCollector;
 
 import android.annotation.SuppressLint;
@@ -21,6 +22,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -67,6 +69,15 @@ public class MainLayout extends BaseActivity {
 			}
 		});
 		
+		ImageButton me = (ImageButton) findViewById(R.id.btn_to_me);
+		me.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(MainLayout.this,MyCount.class);
+				startActivityForResult(intent, 0);
+			}
+		});
+		
 		
 		//图片ID
         imageIds = new int[]{
@@ -77,9 +88,9 @@ public class MainLayout extends BaseActivity {
         
         //图片标题
         titles = new String[]{
-    		"快看，吸血鬼暖男", 
-            "不老男神--汤姆斯",    
-            "铁血硬汉--杰森斯坦森"
+    		"赚钱就是这么任性和容易", 
+            "众包--商业新模式",    
+            "邀请好友注册有奖哦"
         };
         
         //显示的图片
@@ -186,8 +197,8 @@ public class MainLayout extends BaseActivity {
         
         scheduledExecutorService = Executors.newSingleThreadScheduledExecutor();
         
-        //每隔2秒钟切换一张图片
-        scheduledExecutorService.scheduleWithFixedDelay(new ViewPagerTask(), 2, 2, TimeUnit.SECONDS);
+        //每隔5秒钟切换一张图片
+        scheduledExecutorService.scheduleWithFixedDelay(new ViewPagerTask(), 5, 5, TimeUnit.SECONDS);
     }
     
     //切换图片

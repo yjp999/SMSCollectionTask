@@ -89,13 +89,13 @@
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
 	            android:background="@drawable/qrcode"
+	            android:contentDescription="@string/str_cp"
 	            android:scaleType="fitCenter"/>
 	        <TextView 
 	            android:id="@+id/qrtext"
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
-	            
-	            android:text="扫描二维码，下载轻松赚APP"/>
+	            android:text="@string/str_qrcode_download"/>
 	        
 	    </LinearLayout>
         

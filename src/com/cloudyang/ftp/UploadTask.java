@@ -1,10 +1,10 @@
-package com.ftp;
+package com.cloudyang.ftp;
 
 import java.io.File;
 import java.io.IOException;
 
+import com.cloudyang.ftp.FTP.UploadProgressListener;
 import com.cloudyang.messageupload.SmsListActivity;
-import com.ftp.FTP.UploadProgressListener;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -76,10 +76,9 @@ public class UploadTask extends AsyncTask<Void, Integer, Boolean> {
 	protected void onPostExecute(Boolean result) {
 		pDialog.dismiss();
 		if(result){
-			
 			Toast.makeText(context, SmsListActivity.FTP_UPLOAD_SUCCESS, Toast.LENGTH_SHORT).show();
 		}else{
-			Toast.makeText(context, SmsListActivity.FTP_UPLOAD_FAIL, Toast.LENGTH_SHORT).show();
+			Toast.makeText(context, SmsListActivity.FTP_UPLOAD_FAIL, Toast.LENGTH_LONG).show();
 		}
 	}
 
