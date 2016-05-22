@@ -10,7 +10,7 @@ import com.cloudyang.messageupload.SmsListActivity;
 
 public class ProgressInputStream extends InputStream {
 
-    private static final int ONE_KILOBYTES = 1024;  //每上�?K返回�?���?
+    private static final int ONE_KILOBYTES = 1*1024;  //每上�?K返回�?���?
 
     private InputStream inputStream;
 
@@ -55,7 +55,7 @@ public class ProgressInputStream extends InputStream {
     private int incrementCounterAndUpdateDisplay(int count) {
         if (count > 0)
             progress += count;
-        lastUpdate = maybeUpdateDisplay(progress, lastUpdate);
+        	lastUpdate = maybeUpdateDisplay(progress, lastUpdate);
         return count;
     }
 

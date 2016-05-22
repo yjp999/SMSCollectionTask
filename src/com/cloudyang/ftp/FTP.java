@@ -42,7 +42,7 @@ public class FTP {
 	private FTPClient ftpClient;
 
 	public FTP() {
-		this.hostName = "192.168.199.189";
+		this.hostName = "192.168.1.174";
 		this.serverPort = 21;
 		this.userName = "admin";
 		this.password = "1234";

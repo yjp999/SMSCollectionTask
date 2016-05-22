@@ -38,8 +38,9 @@ public class UploadTask extends AsyncTask<Void, Integer, Boolean> {
 	protected void onPreExecute() {
 		pDialog = new ProgressDialog(this.context);
 		pDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-		pDialog.setMessage("正在上传短信...");
-		pDialog.setCancelable(false);
+		pDialog.setTitle("正在上传短信...");
+		pDialog.setMax(100);
+		pDialog.setCancelable(true);
 		pDialog.show();
 	}
 
@@ -49,7 +50,6 @@ public class UploadTask extends AsyncTask<Void, Integer, Boolean> {
 		File file = new File(this.fileName);
         try {
 			ftp.uploadSingleFile(file, this.folderName, new UploadProgressListener(){
-
 				@Override
 				public void onUploadProgress(String currentStep,long uploadSize,File file) {
 					Log.d("yjp", currentStep);										
@@ -57,12 +57,11 @@ public class UploadTask extends AsyncTask<Void, Integer, Boolean> {
 						Log.d("yjp", "-----shanchuan--successful");
 					} else if(currentStep.equals(SmsListActivity.FTP_UPLOAD_LOADING)){
 						long fize = file.length();
-						float num = (float)uploadSize / (float)fize;
+						float num = (float) uploadSize / (float)fize;
 						int result = (int)(num * 100);
-						Log.d("yjp", "-----shangchuan---"+result + "%");
+						Log.d("yjp", "-----shangchuan---" + result + "%");
 						publishProgress(result);
 					}
-					
 				}							
 			});
 			res = true;
@@ -82,13 +81,9 @@ public class UploadTask extends AsyncTask<Void, Integer, Boolean> {
 		}
 	}
 
-	
-
 	@Override
 	protected void onProgressUpdate(Integer... values) {
 		pDialog.setProgress((int) (values[0]));
 	}
 	
-	
-
 }

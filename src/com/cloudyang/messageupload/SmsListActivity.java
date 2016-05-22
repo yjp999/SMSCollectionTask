@@ -44,8 +44,6 @@ import com.cloudyang.ftp.UploadTask;
 import com.cloudyang.info.SmsInfo;
 import com.cloudyang.util.ActivityCollector;
 import com.cloudyang.util.HttpUtils;
-import com.cloudyang.util.SildingFinishLayout;
-import com.cloudyang.util.SildingFinishLayout.OnSildingFinishListener;
 import com.cloudyang.util.SmsContent;
 import com.cloudyang.util.SmsListAdapter;
 import com.cloudyang.util.SmsListAdapter.ViewHolder;
@@ -58,7 +56,7 @@ public class SmsListActivity extends SwipeBackActivity implements OnClickListene
 	
 	private Context context;
 	private UploadTask upload;
-	public static String IP = "192.168.199.189";
+	public static String IP = "192.168.1.174";
 	private static String URL = "http://"+IP+"/TEST/read_msg.php";
 	private static String moneyurl = "http://"+IP+"/TEST/write_money.php";
 	
@@ -146,19 +144,19 @@ public class SmsListActivity extends SwipeBackActivity implements OnClickListene
 		mAdapter = new SmsListAdapter(this,infos);
 		listView.setAdapter(mAdapter);
 		
-		SildingFinishLayout mSildingFinishLayout = (SildingFinishLayout) findViewById(R.id.sildingFinishLayout);  
-        mSildingFinishLayout.setOnSildingFinishListener(new OnSildingFinishListener() {  
-  
-                    @Override  
-                    public void onSildingFinish() {  
-                       SmsListActivity.this.finish();
-                       overridePendingTransition(0,  
-                               R.anim.base_slide_right_out);
-                    }  
-                });
+//		SildingFinishLayout mSildingFinishLayout = (SildingFinishLayout) findViewById(R.id.sildingFinishLayout);  
+//        mSildingFinishLayout.setOnSildingFinishListener(new OnSildingFinishListener() {  
+//  
+//                    @Override  
+//                    public void onSildingFinish() {  
+//                       SmsListActivity.this.finish();
+//                       overridePendingTransition(0,  
+//                               R.anim.base_slide_right_out);
+//                    }  
+//                });
 		
     	// touchView要设置到ListView上面  
-        mSildingFinishLayout.setTouchView(listView);
+//        mSildingFinishLayout.setTouchView(listView);
         listView.setOnItemClickListener(this);
         
         handler_money = new Handler(){
